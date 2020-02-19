@@ -1,0 +1,12 @@
+<h1>My Thoughts</h1>
+<button (click)="(showForm)">New Post</button>
+<div *ngif="show" class="form-container">
+  <app-post-form *ngif="show" (submitted)="onSubmit($event)"></app-post-form>
+</div>
+<div>
+  <app-post
+    *ngFor="let post of listOfPosts; index as i"
+    [post]="post"
+    (deleted)="onDelete(i)"
+  ></app-post>
+</div>

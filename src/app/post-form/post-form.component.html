@@ -1,0 +1,19 @@
+<form #postForm="ngForm" (ngSubmit)="addPost(postForm)">
+  <label for="title">title</label>
+  <input
+    type="text"
+    id="title"
+    name="title"
+    placeholder="enter title"
+    ngModel
+  />
+  <label for="thought">thought</label>
+  <textarea
+    name="thought"
+    id="thought"
+    rows="10"
+    placeholder="enter thought"
+    ngModel
+  ></textarea>
+  <button>submit</button>
+</form>
